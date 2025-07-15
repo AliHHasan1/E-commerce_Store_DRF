@@ -80,11 +80,11 @@ WSGI_APPLICATION = "store.wsgi.application"
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'store',
+        'NAME': 'ec_store', 
         'USER': 'root',
-        'PASSWORD': '1559',
+        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
         'HOST': '127.0.0.1',
-        'PORT': '3308',
+        'PORT': '3306',
     }
 }
 
