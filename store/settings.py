@@ -80,11 +80,11 @@ WSGI_APPLICATION = "store.wsgi.application"
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ec_store', 
+        'NAME': 'store',
         'USER': 'root',
-        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
+        'PASSWORD': '1559', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
         'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PORT': '3308',
     }
 }
 
@@ -129,3 +129,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+AUTH_USER_MODEL = 'account.Customer'
