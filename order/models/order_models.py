@@ -1,5 +1,9 @@
 from django.db import models
 from django.utils import timezone
+
+from account.models import Customer
+
+
 # Create your models here.
 class Order(models.Model):
     STATUS_CHOICES = [
