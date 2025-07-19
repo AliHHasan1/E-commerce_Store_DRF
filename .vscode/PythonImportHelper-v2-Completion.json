@@ -9,6 +9,14 @@
         "documentation": {}
     },
     {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "django.contrib.auth.validators",
         "kind": 6,
         "isExtraImport": true,
@@ -27,18 +35,11 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
+        "label": "django.db",
+        "kind": 6,
+        "isExtraImport": true,
         "importPath": "django.db",
         "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
         "detail": "django.db",
         "documentation": {}
     },
@@ -80,6 +81,176 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "account.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "account.models",
+        "description": "account.models",
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "account.models",
+        "description": "account.models",
+        "isExtraImport": true,
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "account.models",
+        "description": "account.models",
+        "isExtraImport": true,
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "account.models",
+        "description": "account.models",
+        "isExtraImport": true,
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "validate_password",
+        "importPath": "django.contrib.auth.password_validation",
+        "description": "django.contrib.auth.password_validation",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.password_validation",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerSerializer",
+        "importPath": "account.serializers",
+        "description": "account.serializers",
+        "isExtraImport": true,
+        "detail": "account.serializers",
         "documentation": {}
     },
     {
@@ -136,6 +307,78 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerViewSet",
+        "importPath": "account.views",
+        "description": "account.views",
+        "isExtraImport": true,
+        "detail": "account.views",
         "documentation": {}
     },
     {
@@ -156,12 +399,155 @@
         "documentation": {}
     },
     {
-        "label": "account.models",
-        "kind": 6,
+        "label": "Product",
+        "importPath": "product.models.product_models",
+        "description": "product.models.product_models",
         "isExtraImport": true,
-        "importPath": "account.models",
-        "description": "account.models",
-        "detail": "account.models",
+        "detail": "product.models.product_models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "product.models.product_models",
+        "description": "product.models.product_models",
+        "isExtraImport": true,
+        "detail": "product.models.product_models",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Customer",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "product.models",
+        "description": "product.models",
+        "isExtraImport": true,
+        "detail": "product.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "product.models",
+        "description": "product.models",
+        "isExtraImport": true,
+        "detail": "product.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "product.models",
+        "description": "product.models",
+        "isExtraImport": true,
+        "detail": "product.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "product.models",
+        "description": "product.models",
+        "isExtraImport": true,
+        "detail": "product.models",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "CategorySerializer",
+        "importPath": "product.serializers.category_serializers",
+        "description": "product.serializers.category_serializers",
+        "isExtraImport": true,
+        "detail": "product.serializers.category_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProductSerializer",
+        "importPath": "product.serializers.product_serializers",
+        "description": "product.serializers.product_serializers",
+        "isExtraImport": true,
+        "detail": "product.serializers.product_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProductSerializer",
+        "importPath": "product.serializers.product_serializers",
+        "description": "product.serializers.product_serializers",
+        "isExtraImport": true,
+        "detail": "product.serializers.product_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "product.models.category_models",
+        "description": "product.models.category_models",
+        "isExtraImport": true,
+        "detail": "product.models.category_models",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryViewSet",
+        "importPath": "product.views.category_views",
+        "description": "product.views.category_views",
+        "isExtraImport": true,
+        "detail": "product.views.category_views",
+        "documentation": {}
+    },
+    {
+        "label": "ProductViewSet",
+        "importPath": "product.views.product_views",
+        "description": "product.views.product_views",
+        "isExtraImport": true,
+        "detail": "product.views.product_views",
         "documentation": {}
     },
     {
@@ -187,14 +573,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -224,12 +602,57 @@
         "documentation": {}
     },
     {
+        "label": "Customer",
+        "kind": 6,
+        "importPath": "account.models.customer_models",
+        "description": "account.models.customer_models",
+        "peekOfCode": "class Customer(AbstractUser):\n    ROLE_CHOICES = (\n    ('admin', 'Admin'),\n    ('seller', 'Seller'),\n    ('customer', 'Customer'),\n    )\n    # تم جعل الemail حقل unique\n    email = models.EmailField(unique=True, null=False, blank=False)\n    phone = models.CharField(max_length=20)\n    address = models.TextField(max_length=500)",
+        "detail": "account.models.customer_models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerSerializer",
+        "kind": 6,
+        "importPath": "account.serializers.customer_serializers",
+        "description": "account.serializers.customer_serializers",
+        "peekOfCode": "class CustomerSerializer(serializers.ModelSerializer):\n    password = serializers.CharField(write_only=True, required=True, validators=[validate_password])\n    password2 = serializers.CharField(write_only=True, required=True, validators=[validate_password])\n    class Meta:\n        model = Customer\n        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'password2', 'address', 'phone',)\n    def validate_first_name(self, value):\n        if not value.replace(' ', '').isalpha():\n            raise serializers.ValidationError({'first_name': 'the first name must be alphanumeric'})\n        return value",
+        "detail": "account.serializers.customer_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CustomerViewSet",
+        "kind": 6,
+        "importPath": "account.views.customer_views",
+        "description": "account.views.customer_views",
+        "peekOfCode": "class CustomerViewSet(viewsets.ModelViewSet):\n    queryset = Customer.objects.all()\n    serializer_class = CustomerSerializer",
+        "detail": "account.views.customer_views",
+        "documentation": {}
+    },
+    {
         "label": "AccountConfig",
         "kind": 6,
         "importPath": "account.apps",
         "description": "account.apps",
         "peekOfCode": "class AccountConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"account\"",
         "detail": "account.apps",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "account.urls",
+        "description": "account.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'customer', CustomerViewSet)\nurlpatterns = [\n    path('api/', include(router.urls)),\n]",
+        "detail": "account.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "account.urls",
+        "description": "account.urls",
+        "peekOfCode": "urlpatterns = [\n    path('api/', include(router.urls)),\n]",
+        "detail": "account.urls",
         "documentation": {}
     },
     {
@@ -246,8 +669,53 @@
         "kind": 6,
         "importPath": "order.models.orderitem_models",
         "description": "order.models.orderitem_models",
-        "peekOfCode": "class OrderItem(models.Model):\n    # order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')\n    # product = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField()\n    price_at_time = models.DecimalField(max_digits=10, decimal_places=2)\n    class Meta:\n        unique_together = ('order', 'product')  # يمنع تكرار نفس المنتج في نفس الطلب\n    def get_total(self):\n        return self.quantity * self.price_at_time\n    def __str__(self):",
+        "peekOfCode": "class OrderItem(models.Model):\n    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')\n    product = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField()\n    price_at_time = models.DecimalField(max_digits=10, decimal_places=2)\n    class Meta:\n        unique_together = ('order', 'product')  # يمنع تكرار نفس المنتج في نفس الطلب\n    def get_total(self):\n        return self.quantity * self.price_at_time\n    def __str__(self):",
         "detail": "order.models.orderitem_models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "kind": 6,
+        "importPath": "order.models.order_models",
+        "description": "order.models.order_models",
+        "peekOfCode": "class Order(models.Model):\n    STATUS_CHOICES = [\n        ('New', 'New'),\n        ('Processing', 'Processing'),\n        ('Completed', 'Completed'),\n        ('Cancelled', 'Cancelled'),\n    ]\n    customer = models.ForeignKey(Customer, related_name='orders', on_delete=models.CASCADE)\n    order_date = models.DateTimeField(default=timezone.now)\n    total_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)",
+        "detail": "order.models.order_models",
+        "documentation": {}
+    },
+    {
+        "label": "ProductOrderSerializer",
+        "kind": 6,
+        "importPath": "order.serializers.order_serializers",
+        "description": "order.serializers.order_serializers",
+        "peekOfCode": "class ProductOrderSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Product\n        fields = ['id', 'name', 'price', 'image_url']\n        read_only_fields = fields # هذه المعلومات للقراءة فقط داخل الطلب\n# OrderItemSerializer: لتسلسل عناصر الطلب (المنتجات ضمن طلب معين).\nclass OrderItemSerializer(serializers.ModelSerializer):\n    # 'product_details' يعرض تفاصيل المنتج للقراءة فقط.\n    product_details = ProductOrderSerializer(source='product', read_only=True)\n    # 'product_id' يُستخدم عند إرسال البيانات (مثلاً عند إنشاء طلب جديد).",
+        "detail": "order.serializers.order_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItemSerializer",
+        "kind": 6,
+        "importPath": "order.serializers.order_serializers",
+        "description": "order.serializers.order_serializers",
+        "peekOfCode": "class OrderItemSerializer(serializers.ModelSerializer):\n    # 'product_details' يعرض تفاصيل المنتج للقراءة فقط.\n    product_details = ProductOrderSerializer(source='product', read_only=True)\n    # 'product_id' يُستخدم عند إرسال البيانات (مثلاً عند إنشاء طلب جديد).\n    product_id = serializers.PrimaryKeyRelatedField(\n        queryset=Product.objects.all(), source='product', write_only=True\n    )\n    class Meta:\n        model = OrderItem\n        fields = ['id', 'product_id', 'product_details', 'quantity', 'unit_price']",
+        "detail": "order.serializers.order_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "OrderSerializer",
+        "kind": 6,
+        "importPath": "order.serializers.order_serializers",
+        "description": "order.serializers.order_serializers",
+        "peekOfCode": "class OrderSerializer(serializers.ModelSerializer):\n    # 'items' هو سيريالايزر متداخل لعناصر الطلب، ويجب أن يكون مطلوبًا (required=True)\n    # لأنه لا معنى لطلب بدون منتجات.\n    items = OrderItemSerializer(many=True, required=True)\n    # 'customer_details' لعرض اسم العميل باختصار.\n    customer_details = serializers.ReadOnlyField(source='customer.first_name') # أو source='customer.get_full_name' إذا كان موجودًا\n    class Meta:\n        model = Order\n        fields = ['id', 'customer', 'customer_details', 'order_date', 'total_amount', 'status', 'notes', 'items']\n        # هذه الحقول للقراءة فقط ويتم تعيينها بواسطة النظام (مثل المعرف، التاريخ، الإجمالي، الحالة).",
+        "detail": "order.serializers.order_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "OrderStatusUpdateSerializer",
+        "kind": 6,
+        "importPath": "order.serializers.order_serializers",
+        "description": "order.serializers.order_serializers",
+        "peekOfCode": "class OrderStatusUpdateSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Order\n        fields = ['status']\n        # كل الحقول الأخرى للقراءة فقط عند استخدام هذا السيريالايزر.\n        read_only_fields = ['id', 'customer', 'order_date', 'total_amount', 'notes']\n    # التحقق من صحة قيمة الحالة المدخلة.\n    def validate_status(self, value):\n        valid_statuses = [choice[0] for choice in Order.STATUS_CHOICES]\n        if value not in valid_statuses:",
+        "detail": "order.serializers.order_serializers",
         "documentation": {}
     },
     {
@@ -269,12 +737,84 @@
         "documentation": {}
     },
     {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "product.models.category_models",
+        "description": "product.models.category_models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField(blank=True,null=True)\n    is_active = models.BooleanField(default=True)\n    def __str__(self):\n        return self.name\n    class Meta:\n        verbose_name_plural = \"Categories\"",
+        "detail": "product.models.category_models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "product.models.product_models",
+        "description": "product.models.product_models",
+        "peekOfCode": "class Product(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField(blank=True,null=True)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')\n    stock_quantity = models.PositiveIntegerField(default=0)\n    is_available = models.BooleanField(default=True)\n    image_url = models.URLField(blank=True,null=True)\n    def __str__(self):\n        return self.name",
+        "detail": "product.models.product_models",
+        "documentation": {}
+    },
+    {
+        "label": "CategorySerializer",
+        "kind": 6,
+        "importPath": "product.serializers.category_serializers",
+        "description": "product.serializers.category_serializers",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = '__all__'",
+        "detail": "product.serializers.category_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProductSerializer",
+        "kind": 6,
+        "importPath": "product.serializers.product_serializers",
+        "description": "product.serializers.product_serializers",
+        "peekOfCode": "class ProductSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Product\n        fields = '__all__'",
+        "detail": "product.serializers.product_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryViewSet",
+        "kind": 6,
+        "importPath": "product.views.category_views",
+        "description": "product.views.category_views",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    @action(detail=True, methods=['get'])\n    def products(self, request, pk=None):\n        category = self.get_object()\n        products = category.products.all()\n        serializer = ProductSerializer(products, many=True)\n        return Response(serializer.data)",
+        "detail": "product.views.category_views",
+        "documentation": {}
+    },
+    {
+        "label": "ProductViewSet",
+        "kind": 6,
+        "importPath": "product.views.product_views",
+        "description": "product.views.product_views",
+        "peekOfCode": "class ProductViewSet(viewsets.ModelViewSet):\n    queryset = Product.objects.all()\n    serializer_class = ProductSerializer",
+        "detail": "product.views.product_views",
+        "documentation": {}
+    },
+    {
         "label": "ProductConfig",
         "kind": 6,
         "importPath": "product.apps",
         "description": "product.apps",
         "peekOfCode": "class ProductConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"product\"",
         "detail": "product.apps",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "product.urls",
+        "description": "product.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'categories', CategoryViewSet)\nrouter.register(r'products', ProductViewSet)\nurlpatterns = [\n    path('api/', include(router.urls)),\n]",
+        "detail": "product.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "product.urls",
+        "description": "product.urls",
+        "peekOfCode": "urlpatterns = [\n    path('api/', include(router.urls)),\n]",
+        "detail": "product.urls",
         "documentation": {}
     },
     {
@@ -363,7 +903,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"store.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'ec_store', \n        'USER': 'root',\n        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون\n        'HOST': '127.0.0.1',",
+        "peekOfCode": "WSGI_APPLICATION = \"store.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'store',\n        'USER': 'root',\n        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون\n        'HOST': '127.0.0.1',",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -372,7 +912,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "DATABASES = {\n'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'ec_store', \n        'USER': 'root',\n        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون\n        'HOST': '127.0.0.1',\n        'PORT': '3306',\n    }\n}",
+        "peekOfCode": "DATABASES = {\n'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'store',\n        'USER': 'root',\n        'PASSWORD': 'admin', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون\n        'HOST': '127.0.0.1',\n        'PORT': '3306',\n    }\n}",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -381,7 +921,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 8,  # عدد المنتجات في كل صفحة\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 8,\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -408,7 +948,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "TIME_ZONE = \"Asia/Damascus\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "TIME_ZONE = \"Asia/Damascus\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = 'account.Customer'",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -417,7 +957,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = 'account.Customer'",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -426,7 +966,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = 'account.Customer'",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -435,7 +975,7 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = 'account.Customer'",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -444,7 +984,16 @@
         "kind": 5,
         "importPath": "store.settings",
         "description": "store.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nAUTH_USER_MODEL = 'account.Customer'",
+        "detail": "store.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "store.settings",
+        "description": "store.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'account.Customer'",
         "detail": "store.settings",
         "documentation": {}
     },
@@ -453,7 +1002,7 @@
         "kind": 5,
         "importPath": "store.urls",
         "description": "store.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path('', include('product.urls')),\n    path('', include('account.urls')),\n]",
         "detail": "store.urls",
         "documentation": {}
     },

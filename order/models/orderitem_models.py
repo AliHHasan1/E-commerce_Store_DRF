@@ -1,10 +1,10 @@
 import account.models
 from django.db import models
-# from order.models.order_models import Order
-# from product.models.product_models import Product
+from .order_models import Order
+from product.models.product_models import Product
 class OrderItem(models.Model):
-    # order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
-    # product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     price_at_time = models.DecimalField(max_digits=10, decimal_places=2)
 
