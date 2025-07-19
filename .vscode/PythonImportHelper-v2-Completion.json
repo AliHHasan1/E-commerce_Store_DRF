@@ -377,6 +377,15 @@
         "documentation": {}
     },
     {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "store.settings",
+        "description": "store.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 8,  # عدد المنتجات في كل صفحة\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },",
+        "detail": "store.settings",
+        "documentation": {}
+    },
+    {
         "label": "AUTH_PASSWORD_VALIDATORS",
         "kind": 5,
         "importPath": "store.settings",
