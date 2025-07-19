@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'account',
     'product',
     'order',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -82,9 +83,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'store',
         'USER': 'root',
-        'PASSWORD': '1559', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
+        'PASSWORD': '1234', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
         'HOST': '127.0.0.1',
-        'PORT': '3308',
+        'PORT': '3306',
     }
 }
 
