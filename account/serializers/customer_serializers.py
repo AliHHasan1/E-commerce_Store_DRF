@@ -12,7 +12,7 @@ class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = Customer
-        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'password2', 'address', 'phone',)
+        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'password2', 'address', 'phone','role')
 
     def validate_first_name(self, value):
 

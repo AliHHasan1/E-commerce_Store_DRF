@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'account',
     'product',
     'order',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 AUTH_USER_MODEL = 'account.Customer'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 8,  # عدد المنتجات في كل صفحة
+}
