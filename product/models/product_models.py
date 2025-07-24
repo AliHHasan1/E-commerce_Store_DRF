@@ -1,5 +1,7 @@
 from django.db import models
 from .category_models import Category
+from account.models.customer_models import Customer
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
@@ -12,3 +14,18 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ProductReview(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    rating = models.PositiveSmallIntegerField(
+    validators=[MinValueValidator(1), MaxValueValidator(5)])
+    comment = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ['product', 'user']
+
+    def __str__(self):
+        return f"{self.product.name} - {self.rating}"
