@@ -1,56 +1,39 @@
-from rest_framework import viewsets, mixins, status
+from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import ValidationError, PermissionDenied
 from django.db import transaction
-from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-
+from store.permissions import OrderPermissions
 from order.models import Order, OrderItem
 from product.models.product_models import Product
 from account.models import Customer
-
 from order.serializers.order_serializers import OrderSerializer, OrderStatusUpdateSerializer
 
 
-class OrderViewSet(viewsets.ModelViewSet): 
+class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all().select_related('customer').prefetch_related('items__product')
     serializer_class = OrderSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['customer', 'status']
-    permission_classes = [IsAuthenticated]
+    permission_classes = [OrderPermissions]
 
     def get_queryset(self):
-        """
-        يقوم بتصفية مجموعة الاستعلام بناءً على أذونات المستخدم:
-        - يمكن للمشرفين (is_superuser) رؤية جميع الطلبات.
-        - يمكن للعملاء (customer) رؤية طلباتهم فقط.
-        - لـ `/customers/{id}/orders/`، يتم تصفية الطلبات حسب العميل المحدد.
-        """
+
         user = self.request.user
-        queryset = super().get_queryset() # ابدأ بمجموعة الاستعلام الافتراضية للـ ViewSet
+        queryset = super().get_queryset()  # ابدأ بمجموعة الاستعلام الافتراضية للـ ViewSet
 
         # إذا كان الطلب من نقطة نهاية 'customer_orders' (مسار مخصص)
-        if self.action == 'customer_orders':
-            customer_id = self.kwargs.get('pk') # الـ pk هنا هو معرف العميل
-            customer = get_object_or_404(Customer, pk=customer_id)
-
-            # فقط المشرفون يمكنهم رؤية طلبات أي عميل
-            if user.is_superuser:
-                return queryset.filter(customer=customer)
-            # العميل نفسه يمكنه رؤية طلباته فقط
-            elif hasattr(user, 'customer') and user.customer == customer:
-                return queryset.filter(customer=customer)
-            else:
-                raise PermissionDenied("ليس لديك الإذن لرؤية طلبات هذا العميل.")
-
-        # المنطق الافتراضي لـ list و retrieve
-        if user.is_superuser:
+        if not user.is_authenticated:
+            return Order.objects.none()
+        if user.role in ['admin', 'seller']:
+            if 'pk' in self.kwargs and self.action == 'customer_orders':
+                return queryset.filter(customer__pk=self.kwargs['pk'])
             return queryset
-        elif hasattr(user, 'customer') and user.customer:
-            return queryset.filter(customer=user.customer)
-        return Order.objects.none() # إذا لم يكن المستخدم مشرفًا أو عميلاً مرتبطًا، فلا يرى أي طلبات
+        elif user.role == 'customer':
+            if 'pk' in self.kwargs and self.action == 'customer_orders' and str(user.pk) != self.kwargs['pk']:
+                raise PermissionDenied("You can't show orders for this customer.")
+            return queryset.filter(customer =user)
 
     def create(self, request, *args, **kwargs):
         """
@@ -125,7 +108,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         total_amount = 0
         order_items_to_create = []
 
-        with transaction.atomic(): # ضمان أن العملية بأكملها تتم بنجاح أو تفشل بالكامل
+        with transaction.atomic():  # ضمان أن العملية بأكملها تتم بنجاح أو تفشل بالكامل
             # إنشاء الطلب الأساسي
             order = serializer.save(customer=customer_instance, status='New', total_amount=0.00)
 
@@ -163,7 +146,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         order = self.get_object()
         user = request.user
 
-        if not user.is_superuser:
+        if not user.role not in ['admin', 'seller']:
             raise PermissionDenied("ليس لديك الإذن لتحديث حالة الطلب.")
 
         serializer = self.get_serializer(order, data=request.data, partial=True)
@@ -177,12 +160,10 @@ class OrderViewSet(viewsets.ModelViewSet):
         تقييد الحذف للمشرفين فقط.
         """
         user = request.user
-        if not user.is_superuser:
+        if user.role != "admin":
             raise PermissionDenied("ليس لديك الإذن لحذف الطلب.")
 
         return super().destroy(request, *args, **kwargs)
-
-
 
     @action(detail=False, methods=['get'], url_path='by-customer/(?P<pk>[^/.]+)', name='customer-orders')
     def customer_orders(self, request, pk=None):
