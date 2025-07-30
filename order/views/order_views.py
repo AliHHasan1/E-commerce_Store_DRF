@@ -8,25 +8,18 @@ from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 
 from order.models import Order, OrderItem
-from product.models.product_models import Product  
-from account.models import Customer  
+from product.models.product_models import Product
+from account.models import Customer
 
 from order.serializers.order_serializers import OrderSerializer, OrderStatusUpdateSerializer
 
 
-class OrderViewSet(
-    mixins.ListModelMixin,       # GET /api/orders/
-    mixins.RetrieveModelMixin,    # GET /api/orders/{id}/
-    mixins.CreateModelMixin,      # POST /api/orders/
-    mixins.DestroyModelMixin,     # DELETE /api/orders/{id}/
-    viewsets.GenericViewSet
-):
-  
+class OrderViewSet(viewsets.ModelViewSet): 
     queryset = Order.objects.all().select_related('customer').prefetch_related('items__product')
     serializer_class = OrderSerializer
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['customer', 'status']  # تصفية الطلبات حسب العميل والحالة
-    permission_classes = [IsAuthenticated]  # افتراضيًا، جميع الإجراءات تتطلب مصادقة
+    filterset_fields = ['customer', 'status']
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         """
@@ -51,7 +44,7 @@ class OrderViewSet(
                 return queryset.filter(customer=customer)
             else:
                 raise PermissionDenied("ليس لديك الإذن لرؤية طلبات هذا العميل.")
-        
+
         # المنطق الافتراضي لـ list و retrieve
         if user.is_superuser:
             return queryset
@@ -99,14 +92,14 @@ class OrderViewSet(
                 raise ValidationError({
                     "items": f"لا يوجد مخزون كافٍ للمنتج '{product.name}'. المتوفر: {product.stock_quantity}، المطلوب: {quantity}."
                 })
-            
+
             # تخزين بيانات العنصر التي تم التحقق منها للاستخدام لاحقًا
             processed_items.append({
                 'product': product,
                 'quantity': quantity,
-                'price_at_time': product.price  # حفظ سعر المنتج وقت الطلب
+                'price_at_time': product.price
             })
-        
+
         # 4. تنفيذ عملية الإنشاء الفعلية (معاملة ذرية)
         self.perform_create(order_serializer, processed_items)
         headers = self.get_success_headers(order_serializer.data)
@@ -132,7 +125,7 @@ class OrderViewSet(
         total_amount = 0
         order_items_to_create = []
 
-        with transaction.atomic():  # ضمان أن العملية بأكملها تتم بنجاح أو تفشل بالكامل
+        with transaction.atomic(): # ضمان أن العملية بأكملها تتم بنجاح أو تفشل بالكامل
             # إنشاء الطلب الأساسي
             order = serializer.save(customer=customer_instance, status='New', total_amount=0.00)
 
@@ -157,7 +150,6 @@ class OrderViewSet(
             # إنشاء جميع عناصر الطلب دفعة واحدة لأداء أفضل
             OrderItem.objects.bulk_create(order_items_to_create)
 
-           
             order.total_amount = total_amount
             order.save()
 
@@ -171,7 +163,6 @@ class OrderViewSet(
         order = self.get_object()
         user = request.user
 
-        
         if not user.is_superuser:
             raise PermissionDenied("ليس لديك الإذن لتحديث حالة الطلب.")
 
@@ -191,6 +182,8 @@ class OrderViewSet(
 
         return super().destroy(request, *args, **kwargs)
 
+
+
     @action(detail=False, methods=['get'], url_path='by-customer/(?P<pk>[^/.]+)', name='customer-orders')
     def customer_orders(self, request, pk=None):
         """
@@ -198,8 +191,7 @@ class OrderViewSet(
         المشرفون يمكنهم رؤية طلبات أي عميل.
         العميل يمكنه رؤية طلباته فقط.
         """
-      
         queryset = self.get_queryset()
-        
+
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
