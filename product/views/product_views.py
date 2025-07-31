@@ -1,8 +1,8 @@
 from rest_framework import viewsets
-from product.models import Product
-from product.serializers.product_serializers import ProductSerializer
+from product.models.product_models import Product,ProductReview
+from product.serializers.product_serializers import ProductSerializer,ProductReviewSerializer
 from django_filters.rest_framework import DjangoFilterBackend 
-
+from rest_framework import permissions
 from product.filters import ProductFilter
 from store.permissions import ProductPermissions
 
@@ -12,10 +12,14 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = ProductFilter
-    permission_classes = [ProductPermissions]
+    
+    
+class ProductReviewViewSet(viewsets.ModelViewSet):
+    queryset = ProductReview.objects.all()
+    serializer_class = ProductReviewSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
     def perform_create(self, serializer):
-        if self.request.user.role == 'seller':
-            serializer.save(seller=self.request.user)
-        else:
-            serializer.save()
+        user = self.request.user
+        serializer.save(user=user)

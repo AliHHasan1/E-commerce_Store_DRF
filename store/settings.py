@@ -37,12 +37,16 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
     'rest_framework',
     'rest_framework_simplejwt',
     'account',
     'product',
     'order',
+    
     'django_filters',
+    'drf_yasg',
+
 ]
 
 MIDDLEWARE = [
@@ -78,16 +82,17 @@ WSGI_APPLICATION = "store.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'store',
-        'USER': 'root',
-        'PASSWORD': '1234', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+# 'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'store',
+#         'USER': 'root',
+#         'PASSWORD': '1559', # عدلو المغلومات بناء على نوع القاعدة يلي عندكون
+#         'HOST': '127.0.0.1',
+#         'PORT': '3308',
+#     }
+# }
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 8,

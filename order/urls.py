@@ -8,6 +8,6 @@ router = DefaultRouter()
 router.register(r'order-items', OrderItemViewSet, basename='orderitem')
 router.register(r'orders', OrderViewSet, basename='order')
 urlpatterns = [
-    path('api/', include(router.urls)),
-        path('api/customers/<int:pk>/orders/', OrderViewSet.as_view({'get': 'customer_orders'}), name='customer-orders'),
+    path('', include(router.urls)),
+
 ]
