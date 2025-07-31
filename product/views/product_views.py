@@ -4,6 +4,8 @@ from product.serializers.product_serializers import ProductSerializer,ProductRev
 from django_filters.rest_framework import DjangoFilterBackend 
 from rest_framework import permissions
 from product.filters import ProductFilter
+from store.permissions import ProductPermissions
+
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.filter(is_available=True)
