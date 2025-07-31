@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from product.models import Product
+from product.models.product_models import Product,ProductReview
 from django.db import models
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -15,3 +15,9 @@ class ProductSerializer(serializers.ModelSerializer):
             average = reviews.aggregate(avg=models.Avg('rating'))['avg']
             return round(average, 2)
         return None
+
+class ProductReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductReview
+        fields = ['id', 'product', 'rating', 'comment', 'created_at']
+        read_only_fields = ['id', 'created_at']
