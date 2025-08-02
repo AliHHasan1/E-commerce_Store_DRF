@@ -10,8 +10,10 @@ __pycache__/
 
 # C extensions
 *.so
+
 # vscode
 .vscode/
+
 # Distribution / packaging
 .Python
 build/
@@ -64,6 +66,9 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# Environment settings
+.env
 
 # Flask stuff:
 instance/
