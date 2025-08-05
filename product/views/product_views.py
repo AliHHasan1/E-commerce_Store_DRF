@@ -49,14 +49,14 @@ class ProductReviewViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-@action(detail=False, methods=['get'], url_path='search')
-def search_products(self, request):
-    query = request.query_params.get('q', '')
-    if query:
-        products = Product.objects.filter(
-            Q(name__icontains=query) | Q(description__icontains=query),
-            is_available=True
-        )
-        serializer = self.get_serializer(products, many=True)
-        return Response(serializer.data)
-    return Response([])
+    @action(detail=False, methods=['get'], url_path='search')
+    def search_products(self, request):
+        query = request.query_params.get('q', '')
+        if query:
+            products = Product.objects.filter(
+                Q(name__icontains=query) | Q(description__icontains=query),
+                is_available=True
+            )
+            serializer = self.get_serializer(products, many=True)
+            return Response(serializer.data)
+        return Response([])
