@@ -146,7 +146,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         order = self.get_object()
         user = request.user
 
-        if not user.role not in ['admin', 'seller']:
+        if user.role not in ['admin', 'seller']:
             raise PermissionDenied("ليس لديك الإذن لتحديث حالة الطلب.")
 
         serializer = self.get_serializer(order, data=request.data, partial=True)

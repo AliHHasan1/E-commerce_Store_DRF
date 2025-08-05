@@ -6,8 +6,10 @@ from product.serializers.product_serializers import ProductSerializer, ProductRe
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions
 from product.filters import ProductFilter
-from django.db.models import Sum
+from django.db.models import Sum ,Q
 from rest_framework.decorators import action
+
+from store.permissions import ProductPermissions
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -15,6 +17,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = ProductFilter
+    permission_classes = [ProductPermissions]
 
 
 class ProductReviewViewSet(viewsets.ModelViewSet):
@@ -44,3 +47,16 @@ class ProductReviewViewSet(viewsets.ModelViewSet):
         )[:5]
         serializer = self.get_serializer(top_products, many=True)
         return Response(serializer.data)
+
+
+@action(detail=False, methods=['get'], url_path='search')
+def search_products(self, request):
+    query = request.query_params.get('q', '')
+    if query:
+        products = Product.objects.filter(
+            Q(name__icontains=query) | Q(description__icontains=query),
+            is_available=True
+        )
+        serializer = self.get_serializer(products, many=True)
+        return Response(serializer.data)
+    return Response([])
