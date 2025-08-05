@@ -40,3 +40,12 @@ class UserPermissions(BasePermission):
         if request.user.role == 'admin':
             return True
         return obj == request.user
+    
+class IsAdminOrSeller(BasePermission):
+    """
+    Custom permission to allow only 'admin' or 'seller' roles to access.
+    """
+    def has_permission(self, request, view):
+        if request.user.is_authenticated:
+            return request.user.role in ['admin', 'seller']
+        return False

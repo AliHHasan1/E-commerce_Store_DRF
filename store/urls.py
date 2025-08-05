@@ -22,7 +22,7 @@ from django.contrib import admin
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-
+from store.api_views import DashboardStatsAPIView
 schema_view = get_schema_view(
     openapi.Info(
         title="Store API",
@@ -45,4 +45,5 @@ urlpatterns = [
     path('api/', include('product.urls')),
     path('api/', include('order.urls')),
     path('api/', include('account.urls')),
+      path('api/dashboard-stats/', DashboardStatsAPIView.as_view(), name='dashboard-stats'),
 ]
