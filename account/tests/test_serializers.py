@@ -1,10 +1,10 @@
 import pytest
-from account.models import Account
-from account.serializers import AccountSerializer
+from account.models import Customer
+from account.serializers import CustomerSerializer
 
 @pytest.mark.django_db
 def test_account_serializer():
-    acc = Account.objects.create(username="essa", email="essa@example.com")
-    serializer = AccountSerializer(acc)
+    acc = Customer.objects.create(username="essa", email="essa@example.com")
+    serializer = CustomerSerializer(acc)
     data = serializer.data
     assert data["email"] == "essa@example.com"

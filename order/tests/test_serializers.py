@@ -1,7 +1,7 @@
 import pytest
 from order.models import Order
 from order.serializers import OrderSerializer
-from account.models import Account
+from account.models import Customer
 
 @pytest.mark.django_db
 def test_order_serializer_fields():
